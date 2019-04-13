@@ -1,0 +1,36 @@
+
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+    cout << boolalpha;
+    
+    string file_name;
+    string cat_name;
+    string cat_sex;
+    string cat_;
+    
+    
+    
+    cout << "Give File Name(ex. Ruby1123): ";
+    cin >> file_name;
+    cout << endl;
+    file_name = "/users/Harve Criqui/Desktop/Cats/" + file_name + ".html"; // set to .html later //
+    ofstream fout;
+    fout.open(file_name);
+    cout << "Name: ";
+    cin >> cat_name;
+    cout << endl << "Sex: ";
+    cin >> cat_sex;
+    
+    fout << "Name: " << cat_name << "<br>";
+    fout << "<font size= \"+2\">"  <<"Sex: " << cat_sex << "</font>";
+    
+    return EXIT_SUCCESS;
+}
